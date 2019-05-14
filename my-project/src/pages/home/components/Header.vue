@@ -8,18 +8,22 @@
       输入城市/景点/游玩主题
     </div>
     <div class="header-right">
-      城市
+      {{this.city}}
       <span class="iconfont">&#xe605;</span>
     </div>
   </div>
 </template>
 <script>
 export default {
-  name: "HomeHeader"
+  name: "HomeHeader",
+  props: {
+    city: String //String   首字母必须大写
+  }
 };
 </script>
 <style lang="stylus" scoped>
-@import '~styles/varibles.styl'   //前面要加个波浪线
+@import '~styles/varibles.styl'; // 前面要加个波浪线
+
 .header {
   display: flex;
   background: $bgColor;

@@ -2,7 +2,7 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
         <div class="item-img-wrapper">
           <img class="item-img" :src="item.imgUrl" alt>
         </div>
@@ -18,39 +18,8 @@
 <script>
 export default {
   name: "HomeRecommend",
-  data() {
-    return {
-      recommendList: [
-        {
-          id: "001",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1501/f4/f467729126949c3a.water.jpg_140x140_ef235b1c.jpg",
-          title: "东方宫殿建筑代表，世界宫殿建筑典范东方宫殿建筑代表",
-          desc: "故宫"
-        },
-        {
-          id: "002",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1501/f4/f467729126949c3a.water.jpg_140x140_ef235b1c.jpg",
-          title: "东方宫殿建筑代表，世界宫殿建筑典范东方宫殿建筑代表",
-          desc: "故宫"
-        },
-        {
-          id: "003",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1501/f4/f467729126949c3a.water.jpg_140x140_ef235b1c.jpg",
-          title: "东方宫殿建筑代表，世界宫殿建筑典范东方宫殿建筑代表",
-          desc: "故宫"
-        },
-        {
-          id: "004",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1501/f4/f467729126949c3a.water.jpg_140x140_ef235b1c.jpg",
-          title: "东方宫殿建筑代表，世界宫殿建筑典范东方宫殿建筑代表",
-          desc: "故宫"
-        }
-      ]
-    };
+  props:{
+    list:Array
   }
 };
 </script>

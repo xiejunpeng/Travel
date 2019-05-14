@@ -7,11 +7,18 @@ const path = require('path')
 module.exports = {
   dev: {
 
-    // Paths
-    assetsSubDirectory: 'static',
+    // Paths       webpack-dev-server这个工具提供的方法
+    assetsSubDirectory: 'static',  
     assetsPublicPath: '/',
-    proxyTable: {},
-
+    proxyTable: {    //    改urlr别名  在这里改 axios.get('/api/index.json')  //用这个方法请求URL    线上是以api 格式的   改api是在config/index.js
+      '/api': {  
+        target: 'http://localhost:8080',
+        pathRewrite: {
+          '^/api': '/static/mock'
+        }
+      }
+    },
+        
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined

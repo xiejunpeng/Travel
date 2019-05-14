@@ -29,7 +29,7 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),   
-      'styles': resolve('src/assets/styles'),   
+      'styles': resolve('src/assets/styles'),      // 加了这一句   这里就是改@import '~styles/mixins.styl';  原先前面很多../../的
     }
   },
   module: {
