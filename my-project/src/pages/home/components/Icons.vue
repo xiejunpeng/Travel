@@ -76,6 +76,7 @@ export default {
 }
 
 .icons {
+  overflow hidden
   margin-top: 0.1rem;
 
   .icon {
