@@ -4,7 +4,7 @@
     <!-- 3)通过属性值给子组件 -->
     <home-swiper :list="swiperList"></home-swiper>
     <!-- 3)通过属性值给子组件 -->
-    <home-Icons :iconList=iconList></home-Icons>
+    <home-icons :iconList=iconList></home-icons>
     <home-recommend :recommendList=recommendList></home-recommend>
     <home-weekend :Weekend=Weekend></home-weekend>
   </div>
