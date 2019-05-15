@@ -36,12 +36,12 @@ export default {
   },
   methods: {
     // 页面挂载完成就请求'/api/index/json'  .then  数据获取成功就   传到  res  然后就打印出来
-    getHomeInfo() {
+    getHomeInfo() { 
       axios
         .get("/api/index.json") //用这个方法请求URL    线上是以api 格式的   改api是在config/index.js
         .then(this.getHomeInfoSucc); //等getHomeInfoSucc这个方法返回一个对象
     },
-    getHomeInfoSucc(res) {
+    getHomeInfoSucc(res) {  //3
       // console.log(res);
       res = res.data; //获取数据内容
       if (res.ret && res.data) {
