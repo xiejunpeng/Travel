@@ -1,7 +1,16 @@
 <template>
   <div>
     <ul class="list">
-      <li class="item" v-for="(item,key) of cities" :key="key">{{key}}</li>
+      <li
+        class="item"
+        v-for="item of letters"
+        :key="item"
+        :ref="item"
+        @touchstart="handleTouchStart"
+        @touchsmove="handleTouchMove"
+        @touchsend="handleTouchEnd"
+        @click="handleLetterClick"
+      >{{item}}</li>
     </ul>
   </div>
 </template>
@@ -10,6 +19,39 @@ export default {
   name: "CityAlphabet",
   props: {
     cities: Object
+  },
+  data() {
+    return {
+      touchStatus: false
+    };
+  },
+  methods: {
+    handleLetterClick(e) {
+      //兄弟组件之间的通讯
+      this.$emit("change", e.target.innerText); //触发事件 第一个参数事件的名字   第二个参数事件携带的内容
+      // console.log(e.target.innerText);
+    },
+    handleTouchStart() {
+      this.touchStatus = true;
+    },
+    handleTouchMove() {
+      if (this.touchStatus) {
+        const startY = this.$refs['A'][0].offsetTop;
+        console.log(startY);
+      }
+    },
+    handleTouchEnd() {
+      this.touchStatus = false;
+    }
+  },
+  computed: {
+    letters() {
+      const letters = [];
+      for (let i in this.cities) {
+        letters.push(i);
+      }
+      return letters;
+    }
   }
 };
 </script>

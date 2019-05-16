@@ -3,8 +3,9 @@
     <!-- 使用组件 -->
     <city-header></city-header>
     <city-search></city-search>
-    <city-List :cities="cities" :hotCities="hotCities"></city-List>
-    <city-alphabet :cities="cities"></city-alphabet>
+    <city-List :cities="cities" :hotCities="hotCities" :letter="letter"></city-List>
+    <!-- 监听这个组件1)@change="handleLetterChange"     2)定义handleLetterChange这个方法-->
+    <city-alphabet :cities="cities" @change="handleLetterChange"></city-alphabet>
   </div>
 </template>
 <script>
@@ -27,7 +28,8 @@ export default {
   data() {
     return {
       cities: {},
-      hotCities: []
+      hotCities: [],
+      letter: ""
     };
   },
   methods: {
@@ -42,6 +44,10 @@ export default {
         this.cities = data.cities;
         this.hotCities = data.hotCities;
       }
+    },
+    handleLetterChange(letter) {
+      this.letter = letter;
+      // console.log(letter)
     }
   },
   mounted() {
