@@ -2,7 +2,7 @@
   <div>
     <!-- 使用组件 -->
     <city-header></city-header>
-    <city-search></city-search>
+    <city-search :cities=cities></city-search>
     <city-List :cities="cities" :hotCities="hotCities" :letter="letter"></city-List>
     <!-- 监听这个组件1)@change="handleLetterChange"     2)定义handleLetterChange这个方法-->
     <city-alphabet :cities="cities" @change="handleLetterChange"></city-alphabet>
