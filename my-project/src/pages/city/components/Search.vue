@@ -5,7 +5,13 @@
 </template>
 <script>
 export default {
-  name: "CitySearch"
+  name: "CitySearch",
+  methods: {
+    handleCityClick(city) {
+      this.$store.commit("changeCity", city); //派发一个名字叫做changeCity
+      // alert(city)
+    }
+  }
 };
 </script>
 <style lang="stylus" scoped>

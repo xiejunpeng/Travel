@@ -9,7 +9,7 @@
     </div>
     <router-link to="/City">
       <div class="header-right">
-        北京
+      {{this.$store.state.city}}
         <span class="iconfont">&#xe605;</span>
       </div>
     </router-link>
@@ -18,9 +18,9 @@
 <script>
 export default {
   name: "HomeHeader",
-  props: {
-    city: String //String   首字母必须大写
-  }
+  // props: {
+  //   city: String //String   首字母必须大写
+  // }
 };
 </script>
 <style lang="stylus" scoped>
