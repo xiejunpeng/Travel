@@ -13,6 +13,7 @@
 <script>
 export default {
   name: "CitySearch",
+<<<<<<< HEAD
   props: {
     cities: Object
   },
@@ -42,6 +43,12 @@ export default {
         }
         this.list = result;
       }, 100);
+=======
+  methods: {
+    handleCityClick(city) {
+      this.$store.commit("changeCity", city); //派发一个名字叫做changeCity
+      // alert(city)
+>>>>>>> origin/city-vuex
     }
   }
 };

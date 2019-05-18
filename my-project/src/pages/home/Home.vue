@@ -1,6 +1,6 @@
 <template>
   <div>
-    <home-header :city="city"></home-header>
+    <home-header></home-header>
     <!-- 3)通过属性值给子组件 -->
     <home-swiper :list="swiperList"></home-swiper>
     <!-- 3)通过属性值给子组件 -->
@@ -27,7 +27,6 @@ export default {
   },
   data() {
     return {
-      city: "", //1)事先定义空字符串
       swiperList: [], //1)事先定义空数组织
       iconList: [],
       recommendList:[],
@@ -47,7 +46,6 @@ export default {
       if (res.ret && res.data) {
         //如果后端正确返回结果 而且 res里面有data
         const data = res.data;
-        this.city = data.city; //2)等拿到数据以后再把值返回给上面空字符中
         this.swiperList = data.swiperList; //2)等拿到数据以后再把值返回给上面空数组
         this.iconList = data.iconList;
         this.recommendList = data.recommendList;
