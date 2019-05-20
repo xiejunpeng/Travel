@@ -74,60 +74,43 @@ export default {
 };
 </script>
 <style lang="stylus" scoped>
-.list {
-  position: absolute;
-  top: 1.58rem;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
-
-  .area {
-    .title {
-      line-height: 0.44rem;
-      background: #eee;
-      // padding: 0.2rem;
-      color: #666;
-      font-size: 0.26rem;
-    }
-
-    .border-topbottom {
-      &:before {
-        border-color: #ccc;
-      }
-
-      &:after {
-        border-color: #777;
-      }
-    }
-
-    .button-list {
-      overflow: hidden;
-      padding: 0.1rem 0.6rem 0.1rem 0.1rem;
-      background: #fff;
-
-      .button-wrapper {
-        width: 33.33%;
-        float: left;
-
-        .button {
-          padding: 0.1rem 0;
-          text-align: center;
-          margin: 0.1rem;
-          border: 0.02rem solid #ccc;
-          border-radius: 0.06rem;
-        }
-      }
-
-      .item-list {
-        .item {
-          line-height: 0.54rem;
-          color: #666;
-          padding-left: 0.2rem;
-        }
-      }
-    }
-  }
-}
+  @import '~styles/varibles.styl'
+  .border-topbottom
+    &:before
+      border-color: #ccc
+    &:after
+      border-color: #ccc
+  .border-bottom
+    &:before
+      border-color: #ccc
+  .list
+    overflow: hidden
+    position: absolute
+    top: 1.58rem
+    left: 0
+    right: 0
+    bottom: 0
+    .title
+      line-height: .54rem
+      background: #eee
+      padding-left: .2rem
+      color: #666
+      font-size: .26rem
+    .button-list
+      overflow: hidden
+      padding: .1rem .6rem .1rem .1rem
+      .button-wrapper
+        float: left
+        width: 33.33%
+        .button
+          margin: .1rem
+          padding: .1rem 0
+          text-align: center
+          border: .02rem solid #ccc
+          border-radius: .06rem
+    .item-list
+      .item
+        line-height: .76rem
+        padding-left: .2rem
 </style>
 

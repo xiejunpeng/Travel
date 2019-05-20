@@ -10,7 +10,7 @@ module.exports = {
     // Paths       webpack-dev-server这个工具提供的方法
     assetsSubDirectory: 'static',  
     assetsPublicPath: '/',
-    proxyTable: {    //    改urlr别名  在这里改 axios.get('/api/index.json')  //用这个方法请求URL    线上是以api 格式的   改api是在config/index.js
+    proxyTable: {    //    改url改字服务器的名字  在这里改 axios.get('/api/index.json')  //用这个方法请求URL    线上是以api 格式的   改api是在config/index.js
       '/api': {  
         target: 'http://localhost:8080',
         pathRewrite: {

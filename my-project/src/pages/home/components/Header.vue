@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="header-left">
-      <span class="iconfont">&#xe624;</span>
+      <span class="iconfont back-icon">&#xe624;</span>
     </div>
     <div class="header-input">
       <span class="iconfont">&#xe632;</span>
@@ -9,15 +9,15 @@
     </div>
     <router-link to="/City">
       <div class="header-right">
-      {{this.$store.state.city}}
-        <span class="iconfont">&#xe605;</span>
+        {{this.$store.state.city}}
+        <span class="iconfont arrow-icon">&#xe605;</span>
       </div>
     </router-link>
   </div>
 </template>
 <script>
 export default {
-  name: "HomeHeader",
+  name: "HomeHeader"
   // props: {
   //   city: String //String   首字母必须大写
   // }
@@ -35,6 +35,12 @@ export default {
   .header-left {
     width: 0.64rem;
     float: left;
+
+    .back-icon {
+      display: block;
+      text-align: center;
+      font-size: 0.4rem;
+    }
   }
 
   .header-input {
@@ -53,6 +59,13 @@ export default {
     float: right;
     text-align: center;
     color: #fff;
+
+    .arrow-icon {
+      display:inline-block;
+      margin-right: .109375rem;
+      font-size: 0.24rem;
+      
+    }
   }
 }
 </style>
