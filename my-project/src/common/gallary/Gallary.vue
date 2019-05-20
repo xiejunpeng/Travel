@@ -20,8 +20,8 @@ export default {
       type: Array,
       default() {
         return [
-          "http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_600x330_bf9c4904.jpg",
-          "http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_600x330_bf9c4904.jpg"
+          "http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_800x800_70debc93.jpg",
+          "http://img1.qunarzz.com/sight/p0/1709/76/7691528bc7d7ad3ca3.img.png_800x800_9ef05ee7.png"
         ];
       }
     }
@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     handleGallaryClick() {
-      this.$emit("close")
+      this.$emit("close");
     }
   }
 };
@@ -63,7 +63,7 @@ export default {
   .wrapper {
     height: 0;
     width: 100%;
-    padding-bottom: 60%;
+    padding-bottom: 100%;
 
     .gallary-img {
       display: block;
