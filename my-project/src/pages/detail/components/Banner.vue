@@ -10,11 +10,14 @@
         </div>
       </div>
     </div>
-    <common-gallary :gallaryImgs="gallaryImgs" v-show="showGallary" @close="handleGallaryClick"></common-gallary>
+    <fade-animation>  <!-- 会做插槽的形式 -->
+      <common-gallary :gallaryImgs="gallaryImgs" v-show="showGallary" @close="handleGallaryClick"></common-gallary>
+    </fade-animation>
   </div>
 </template>
 <script>
 import CommonGallary from "common/gallary/Gallary";
+import FadeAnimation from "common/fade/FadeAnimation";
 export default {
   name: "DetailBanner",
   props: {
@@ -25,7 +28,7 @@ export default {
   },
   data() {
     return {
-      showGallary: false,
+      showGallary: false
       // imgs: [
       //   "http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_800x800_70debc93.jpg",
       //   "http://img1.qunarzz.com/sight/p0/1709/76/7691528bc7d7ad3ca3.img.png_800x800_9ef05ee7.png"
@@ -41,7 +44,8 @@ export default {
     }
   },
   components: {
-    CommonGallary
+    CommonGallary,
+    FadeAnimation,
   }
 };
 </script>
